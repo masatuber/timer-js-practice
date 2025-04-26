@@ -1,0 +1,103 @@
+/* body全体のCSS記述 */
+body {
+  background: #282c34;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+
+  /* 横並び */
+  display: flex;
+
+  /* 縦に配置 */
+  align-items: center;
+
+  /* 横を基準に真ん中に配置する */
+  justify-content: center;
+}
+
+.timer-container {
+  /* インラインレベルコンテンツの水平方向の配置 */
+  text-align: center;
+
+}
+
+/* タイマーの本体CSS設定 */
+.timer {
+  /* フォントの大きさを定義px,rem */
+  font-size: 48px;
+
+  /* 円形グラデーションを指定できるbackgroundプロパティの関数 */ 
+  background: radial-gradient(circle, #ff7e5f, #feb47b);
+
+  /* ボタンの隙間を広げるために設定要素の外側 */
+  margin-bottom: 20px;
+
+  /* 要素の幅設定 box-sizing border-box;widthの大きさは変わらない */
+  width: 200px;
+
+  /* 要素からの高さ */
+  height: 200px;
+
+  /* 要素を丸くする50％ */
+  border-radius: 50%;
+
+  /* レイアウトを適用、子要素の要素と、それらをラップする親要素のコンテナから構成される横並び */
+  display: flex;
+
+  /* flexアイテム上下配置を指定するプロパティ */
+  align-items: center;
+
+  /* コンテナの中心にアイテムを配置 */
+  justify-content: center;
+
+  /* 左右向きpx 上下の向きpx ぼかしpx 広がりpx 色 内側指定; */
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
+
+  /* border: 線の太さ, 線の種類, 線の色;枠線 */
+  border: 5px solid #ff7e5f;
+
+  /* 背景を文字形で切り抜く webkitベンダープレフィックス*/
+  -webkit-background-clip: text;
+
+  /* webkit文字色のプロパティ */
+  -webkit-text-fill-color: transparent;
+}
+
+/* ボタン一括で管理するクラス */
+.buttons {
+  display: flex;
+  justify-content: center;
+
+  /* 要素間の余白を定義するプロパティ複数要素を等間隔にする時便利 */
+  gap: 25px;
+}
+
+/* ボタンのCSS */
+.btn {
+  /* 要素の内側を設定 */
+  padding: 10px 20px;
+
+  /* 文字サイズ */
+  font-size: 16px;
+
+  /* 枠線非表示 */
+  border: none;
+
+  background: #ff7e5f;
+
+  color: white;
+
+  /* カーソルの形状を指し手の形に変更 */
+  cursor: pointer;
+
+  /* ある状態から別の状態への変化 */
+  transition: 0.3s ease, transform 0.3s ease;
+}
+
+/* マウスホバーで色を変化させる */
+.btn:hover {
+  background: #feb47b;
+
+  /* 要素を拡大・縮小する */
+  transform: scale(1.1);
+}
